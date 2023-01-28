@@ -8,8 +8,6 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
 import java.nio.file.Paths;
-import java.util.Observable;
-import java.util.Observer;
 
 public class CreditsController {
 
@@ -36,7 +34,6 @@ public class CreditsController {
     @FXML
     void exitOnKeyPressed(KeyEvent event) {
         if (event.getCode() == KeyCode.ENTER) {
-            System.out.println("I press Enter to exit");
             System.exit(1);
         }
     }
