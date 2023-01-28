@@ -57,9 +57,6 @@ public class GameController implements Observer {
     private boolean meteoro_flag = true;
     private boolean game_flag = true;
 
-
-    //private int puntuacion = 0;
-
     private String path = "D:\\Documentos\\Universidad\\7mo Cuatrimestre\\Programacion Concurrente\\Programs\\meteorStrike\\src\\main\\resources\\com\\concurrencia\\meteorStrike\\bgm\\bgMusicGame.mp3";
     private String pathExplosion = "D:\\Documentos\\Universidad\\7mo Cuatrimestre\\Programacion Concurrente\\Programs\\meteorStrike\\src\\main\\resources\\com\\concurrencia\\meteorStrike\\images\\explosion.gif";
 
@@ -208,31 +205,6 @@ public class GameController implements Observer {
                     meteoro.setVelocidad(-75);
                 }
 
-            /*System.out.println("Multiplo de 50");
-            if (velConstante > velLimite) {
-                velConstante = velConstante - 5;
-                System.out.println("Velocidad aumentada: " + velConstante);
-
-            }
-        }*/
-                //System.out.println(imgMeteoro.getLayoutX() + "      y:" + imgMeteoro.getLayoutY());
-                //score.setSetScore(puntuacion);
-
-                //puntuacion+=10;
-                //System.out.println(meteoro.getVelocidad() + "       puntuación: " + puntuacion  );
-                //lblScore.setText("Score: " + String.valueOf(puntuacion));
-
-                //System.out.println("Pos: " + imgMeteoro.getLayoutX());
-        /*if (imgMeteoro.getLayoutX() > -25) {
-            int newRandom = random.nextInt((700 - 94 + 1) + 100);
-            this.meteor_flag = false;
-            this.meteorito.setStatus(true);
-            meteorito.setPosicion(new Vector(2, 750, newRandom));
-            imgMeteoro.setVisible(true);
-            imgMeteoro.setTranslateY(newRandom);
-            imgMeteoro.setLayoutX(750);
-            imgMeteoro.toFront();
-        }*/
         }
 
     }
