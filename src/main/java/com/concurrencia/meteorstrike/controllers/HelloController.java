@@ -49,12 +49,6 @@ public class HelloController {
         Scene newScene = new Scene(root);
         newScene.getRoot().requestFocus();
         HelloApplication.primaryStage.setScene(newScene);
-        /*Parent root = FXMLLoader.load(HelloApplication.class.getResource("game-view.fxml"));
-        Scene scene = new Scene(root);
-        primaryStage.setTitle("Meteor-Strike!");
-        primaryStage.setResizable(false);
-        primaryStage.setScene(scene);
-        primaryStage.show();*/
     }
 
     @FXML
