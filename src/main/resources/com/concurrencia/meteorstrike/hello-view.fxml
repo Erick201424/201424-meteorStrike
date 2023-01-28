@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.concurrencia.meteorstrike.controllers.HelloController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/bgAstroGif.gif" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" text="Meteor-Strike">
+         <font>
+            <Font name="Rage Italic" size="55.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.5340909018661038" endY="0.6287878625320665" startX="0.44696968161698547" startY="0.20359848484848486">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9157894849777222" green="0.847953200340271" blue="0.847953200340271" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006729475100942127">
+                     <color>
+                        <Color red="0.9157894849777222" green="0.847953200340271" blue="0.847953200340271" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.5370121130551819">
+                     <color>
+                        <Color red="0.9843137264251709" green="0.4431372582912445" blue="0.27450981736183167" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.9973082099596231">
+                     <color>
+                        <Color red="0.9960784316062927" green="0.886274516582489" blue="0.5137255191802979" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9960784316062927" green="0.886274516582489" blue="0.5137255191802979" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="btnJugar" alignment="CENTER_RIGHT" layoutX="466.0" layoutY="232.0" mnemonicParsing="false" onMouseClicked="#btnJugar_OnMouse" prefHeight="50.0" prefWidth="120.0" stylesheets="@styles/styles.css" text="Jugar" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSalir" alignment="CENTER_RIGHT" layoutX="466.0" layoutY="305.0" mnemonicParsing="false" onMouseClicked="#btnSalir_OnMouse" prefHeight="50.0" prefWidth="120.0" stylesheets="@styles/styles.css" text="Salir" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="17.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="bgCredits" onKeyPressed="#exitOnKeyPressed" prefHeight="400.0" prefWidth="531.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.concurrencia.meteorstrike.controllers.CreditsController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="587.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/game-over-glitch.gif" />
+         </image>
+      </ImageView>
+      <Label layoutX="181.0" layoutY="297.0" text="Press Enter to EXIT" textFill="WHITE">
+         <font>
+            <Font name="Monospaced Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="24.0" text="Erick Arturo Díaz Hernández - 201424" textFill="WHITE">
+         <font>
+            <Font name="Monospaced Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
