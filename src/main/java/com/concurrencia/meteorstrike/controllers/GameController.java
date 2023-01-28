@@ -152,7 +152,6 @@ public class GameController implements Observer {
         if (o instanceof Score) {
             puntuacion = score.getScore();
             punt = (String.valueOf(puntuacion));
-            System.out.println("Puntuacion: " + punt);
             Platform.runLater(() -> lblScore.setText("Score: " + punt));
 
         } else {
