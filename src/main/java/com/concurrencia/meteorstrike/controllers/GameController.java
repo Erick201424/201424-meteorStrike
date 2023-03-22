@@ -42,8 +42,10 @@ public class GameController implements Observer {
     public Label lblScore;
 
     @FXML
-    private Label lbl_Continue;
+    private Label lbl_PuntuacionFinal;
 
+    @FXML
+    private Label lbl_Continue;
 
     private Random random;
 
@@ -57,8 +59,9 @@ public class GameController implements Observer {
     private boolean meteoro_flag = true;
     private boolean game_flag = true;
 
-    private String path = "D:\\Documentos\\Universidad\\7mo Cuatrimestre\\Programacion Concurrente\\Programs\\meteorStrike\\src\\main\\resources\\com\\concurrencia\\meteorStrike\\bgm\\bgMusicGame.mp3";
-    private String pathExplosion = "D:\\Documentos\\Universidad\\7mo Cuatrimestre\\Programacion Concurrente\\Programs\\meteorStrike\\src\\main\\resources\\com\\concurrencia\\meteorStrike\\images\\explosion.gif";
+    private String path = "src/main/resources/com/concurrencia/meteorstrike/bgm/bgMusicGame.mp3";
+    private String pathExplosion = "D:\\Documentos\\Universidad\\7mo Cuatrimestre\\Programacion Concurrente\\Programs\\meteorStrike\\src\\main\\resources\\com\\concurrencia\\meteorstrike\\images\\explosion.gif";
+    private String path2 = "";
 
     private MediaPlayer mediaPlayer;
 
@@ -168,7 +171,9 @@ public class GameController implements Observer {
                     meteoro.setStatus(false);
                     score.setStatus(false);
                     Platform.runLater(() -> {
-                        lblScore.setText("Fin");
+                        lblScore.setVisible(false);
+                        lbl_PuntuacionFinal.setText("Puntuación: " + puntuacion);
+                        lbl_PuntuacionFinal.setVisible(true);
                         imgSpaceship.setImage(new Image(pathExplosion));
                         FadeTransition explosion = new FadeTransition(
                                 Duration.millis(1000), imgSpaceship);
@@ -182,7 +187,6 @@ public class GameController implements Observer {
                     int aleatorio = random.nextInt((220));
                     this.meteoro.setStatus(false);
                     this.imgMeteoro.setVisible(false);
-                    this.meteoro_flag = false;
 
                     if (!meteoro.getStatus()) {
                         this.meteoro.setStatus(true);
@@ -190,7 +194,6 @@ public class GameController implements Observer {
                         this.imgMeteoro.setVisible(true);
                         imgMeteoro.setLayoutY(aleatorio);
                         imgMeteoro.setLayoutX(675);
-                        this.meteoro_flag = true;
                     }
                 }
 

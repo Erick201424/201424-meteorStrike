@@ -1,7 +1,6 @@
 package com.concurrencia.meteorstrike.models;
 
 import java.util.Observable;
-import java.util.Random;
 
 public class Nave extends Observable implements Runnable {
 
@@ -32,7 +31,7 @@ public class Nave extends Observable implements Runnable {
             notifyObservers(pos);
 
             try {
-                Thread.sleep(150L);
+                Thread.sleep(150L); 
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

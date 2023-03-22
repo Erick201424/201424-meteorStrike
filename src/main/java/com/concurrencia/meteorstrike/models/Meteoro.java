@@ -21,6 +21,21 @@ public class Meteoro extends Observable implements Runnable {
         this.pos = pos;
     }
 
+    @Override
+    public void run() {
+        while (status) {
+            pos.setPosX(pos.getPosX()-35 + velocidad);
+            setChanged();
+            notifyObservers(pos);
+            try {
+                Thread.sleep(100L);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
     public int getVelocidad() {
         return velocidad;
     }
@@ -37,34 +52,4 @@ public class Meteoro extends Observable implements Runnable {
         this.status = status;
     }
 
-    @Override
-    public void run() {
-        while (status) {
-            pos.setPosX(pos.getPosX()-35 + velocidad);
-            setChanged();
-            notifyObservers(pos);
-            try {
-                Thread.sleep(100L);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-
-    }
-
-    /*@Override
-    public void run() {
-        while (status) {
-            pos.setPosX(pos.getPosX() + random.nextInt(50) + 10);
-            //Notificar el cambio
-            this.setChanged();
-            this.notifyObservers(pos);
-        }
-        //Dormir hilo
-        try {
-            Thread.sleep(250L);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }*/
 }

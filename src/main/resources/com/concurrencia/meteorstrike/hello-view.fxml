@@ -53,12 +53,17 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <Button fx:id="btnJugar" alignment="CENTER_RIGHT" layoutX="466.0" layoutY="232.0" mnemonicParsing="false" onMouseClicked="#btnJugar_OnMouse" prefHeight="50.0" prefWidth="120.0" stylesheets="@styles/styles.css" text="Jugar" textFill="WHITE">
+      <Button fx:id="btnJugar" alignment="CENTER_RIGHT" layoutX="466.0" layoutY="198.0" mnemonicParsing="false" onMouseClicked="#btnJugar_OnMouse" prefHeight="50.0" prefWidth="120.0" stylesheets="@styles/styles.css" text="Jugar" textFill="WHITE">
          <font>
             <Font name="Berlin Sans FB" size="17.0" />
          </font>
       </Button>
       <Button fx:id="btnSalir" alignment="CENTER_RIGHT" layoutX="466.0" layoutY="305.0" mnemonicParsing="false" onMouseClicked="#btnSalir_OnMouse" prefHeight="50.0" prefWidth="120.0" stylesheets="@styles/styles.css" text="Salir" textFill="WHITE">
+         <font>
+            <Font name="Berlin Sans FB" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnCreditos" alignment="CENTER_RIGHT" layoutX="431.0" layoutY="253.0" mnemonicParsing="false" onMouseClicked="#btnCreditos_OnMouse" prefHeight="56.0" prefWidth="155.0" stylesheets="@styles/styles.css" text="Créditos" textFill="WHITE">
          <font>
             <Font name="Berlin Sans FB" size="17.0" />
          </font>

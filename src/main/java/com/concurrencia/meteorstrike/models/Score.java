@@ -5,9 +5,6 @@ import java.util.Observable;
 public class Score  extends Observable implements Runnable {
 
     private int score;
-    private String sScore;
-
-    private boolean timeThread;
     private boolean status;
 
     public Score() {
@@ -23,14 +20,6 @@ public class Score  extends Observable implements Runnable {
         this.score = score;
     }
 
-    public boolean isStatus() {
-        return status;
-    }
-
-    public void setStatus(boolean status) {
-        this.status = status;
-    }
-
     @Override
     public void run() {
 
@@ -39,12 +28,19 @@ public class Score  extends Observable implements Runnable {
             notifyObservers(score);
             score += 10;
             try {
-                //System.out.println("Score: " + score);
                 Thread.sleep(1000L);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
 
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 }

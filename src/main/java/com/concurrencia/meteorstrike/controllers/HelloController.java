@@ -18,9 +18,25 @@ public class HelloController {
     private Button btnJugar;
 
     @FXML
+    private Button btnCreditos;
+
+    @FXML
     private Button btnSalir;
 
-    private String path = "D:\\Documentos\\Universidad\\7mo Cuatrimestre\\Programacion Concurrente\\Programs\\meteorStrike\\src\\main\\resources\\com\\concurrencia\\meteorStrike\\bgm\\bgMusicUnder.mp3";
+    @FXML
+    private Button btnEmpezar;
+
+    @FXML
+    void btnEmpezar_OnMouse(MouseEvent event) throws IOException {
+        mediaPlayer.stop();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("game-view.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene creditScene = new Scene(root);
+        creditScene.getRoot().requestFocus();
+        HelloApplication.primaryStage.setScene(creditScene);
+    }
+
+    private String path = "src/main/resources/com/concurrencia/meteorstrike/bgm/bgMusicUnder.mp3";
     private MediaPlayer mediaPlayer;
 
     public void playSoundMenu(){
@@ -39,11 +55,21 @@ public class HelloController {
     @FXML
     void btnJugar_OnMouse(MouseEvent event) throws IOException {
         mediaPlayer.stop();
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("game-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("instructions-view.fxml"));
         Parent root = fxmlLoader.load();
         Scene newScene = new Scene(root);
         newScene.getRoot().requestFocus();
         HelloApplication.primaryStage.setScene(newScene);
+    }
+
+    @FXML
+    void btnCreditos_OnMouse(MouseEvent event) throws IOException {
+        mediaPlayer.stop();
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("credits-view.fxml"));
+        Parent root = fxmlLoader.load();
+        Scene creditScene = new Scene(root);
+        creditScene.getRoot().requestFocus();
+        HelloApplication.primaryStage.setScene(creditScene);
     }
 
     @FXML
